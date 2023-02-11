@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+  <!-- jQuery library -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.png" />
+  <title>Register</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="Register.css" />
+</head>
+
+<body>
+    <header>
+        <div class="page-header sticky-header-nav" id="navbar">
+          <!-- Top of navbar-->
+          <div class="header-contact">
+            <div class="container-max-xl p-0">
+              <div class="contact-info">
+                <div class="contact-text">
+                  <span>Support & Contact Us</span>
+                  <span>:</span>
+                  <span>
+                    <span class="fa fa-phone"></span>
+                    <span>035 477 8644</span>
+                  </span>
+                  <span>
+                    <span class="fa fa-envelope"></span>
+                    <a href="mailto:support@carbreezy.com"><span>support@carbreezy.com</span></a>
+                    <a id="signUp" href="login.html">
+                      Sign In
+                    </a>
+                    <span> | </span>
+                    <a id="signUp" href="Register.html">
+                      Sign Up
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End of top navbar-->
+    
+          <!--Navbar and logo-->
+          <div class="header-navigation">
+            <div class="logo">
+              <a href="index.html">
+                <img src="../img/logo.png" alt="carbreezy" style="max-height: 55px; width: auto" />
+              </a>
+              <ul id="navlist">
+                <li>
+                  <button>
+                    <a href="../index.html" style="color: black"><span class="fa fa-home" style="font-size: 36px"></span></a>
+                  </button>
+                </li>
+                <li>
+                  <button id="navbar-btn">
+                    <a href="shopCar.html" style="color: black">Shop Car</a>
+                  </button>
+                </li>
+                <li>
+                  <button id="navbar-btn">
+                    <a href="#" style="color: black">New</a>
+                  </button>
+                </li>
+                <li>
+                  <button id="navbar-btn">
+                    <a href="#" style="color: black">Used</a>
+                  </button>
+                </li>
+                <li>
+                  <button id="navbar-btn">
+                    <a href="#" style="color: black">Brands</a>
+                  </button>
+                </li>
+                <li>
+                  <button id="navbar-btn">
+                    <a href="#" style="color: black">Gallery</a>
+                  </button>
+                </li>
+              </ul>
+              <script>
+                var buttons = document.querySelectorAll("li button");
+                for (var i = 1; i < buttons.length; i++) {
+                  buttons[i].addEventListener("click", function () {
+                    var link = this.querySelector("a");
+                    link.style.color = "blue";
+                  });
+                }
+              </script>
+            </div>
+          </div>
+          <!--End of Navbar and logo-->
+        </div>
+    
+        <!-- Banner goes here-->
+        <div style="
+              width: 100%;
+              background-repeat: no-repeat;
+              background-size: cover;
+              min-height: 600px;
+              background-image: url('../img/indexBanner.jpg');
+            ">
+          <div class="text-container-banner">
+            <div class="col-sm-6 spacing-reset">
+              <div class="content-default">
+                <div class="text-content-container">
+                  <h1 style="font-weight: 550">
+                    BUY YOUR CAR
+                    <br />
+                    IN A BREEZE
+                  </h1>
+                  <p style="font-weight: 400; font-size: 15pt">
+                    Lifetime Warranty + 7-Day Returns
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of banner-->
+    </header>
+    <!-- <Section class="container" ng-app="app" ng-controller="registerController"> -->
+    <section class="container">
+        <div class="form-body">
+            <div class="row">
+                <div class="form-holder">
+                    <div class="form-content col-sm-8">
+                        <div class="form-items">
+                            <h3>Register Account</h3>
+                            <p>Fill in the data below.</p>
+
+                            <!-- <form action="login.html" class="requires-validation" novalidate ng-submit="register()"> -->
+                            <form action="login.html" class="requires-validation" novalidate
+                                onsubmit="return register();">
+                                <div class="col-md-12" style="padding-left: 0;">
+                                    <input class="form-control" type="text" name="name" id="name"
+                                        placeholder="Full Name" required autofocus />
+                                    <div class="valid-feedback">Username field is valid!</div>
+                                    <div class="invalid-feedback">
+                                        Username field cannot be blank!
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12" style="padding-left: 0;">
+                                    <input class="form-control" type="email" name="email" id="email"
+                                        placeholder="E-mail Address" required />
+                                    <div class="valid-feedback">Email field is valid!</div>
+                                    <div class="invalid-feedback">Email field invalid!</div>
+                                </div>
+
+                                <div class="col-md-12" style="padding-left: 0;">
+                                    <input class="form-control" type="number" name="phone" id="phone"
+                                        placeholder="Phone number" required style="margin-top: 20px" />
+                                    <div class="valid-feedback">
+                                        Phone number field is valid!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Phone number field cannot be blank!
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12" style="padding-left: 0;">
+                                    <select class="form-select mt-3" required>
+                                        <option selected disabled value="" id="Countries">
+                                            Countries
+                                        </option>
+                                        <option value="jweb">VietNam</option>
+                                        <option value="sweb">India</option>
+                                    </select>
+                                    <div class="valid-feedback">You selected a position!</div>
+                                    <div class="invalid-feedback">
+                                        Please select a position!
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12" style="padding-left: 0;">
+                                    <input class="form-control" type="password" name="password" id="password"
+                                        placeholder="Password" required />
+                                    <div class="valid-feedback">Password field is valid!</div>
+                                    <div class="invalid-feedback">
+                                        Password field cannot be blank!
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12" style="padding-left: 0;">
+                                    <input class="form-control" type="password" name="cfpassword" id="cfpassword"
+                                        placeholder="Password confirm" required />
+                                    <div class="valid-feedback">
+                                        Password confirm field is valid!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Password confirm field cannot be blank!
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 mt-3" style="padding-left: 0;">
+                                    <label class="mb-3 mr-1" for="gender">Gender: </label>
+
+                                    <input type="radio" class="btn-check" name="gender" id="male" autocomplete="off"
+                                        required />
+                                    <label class="btn btn-sm btn-outline-secondary" for="male">Male</label>
+
+                                    <input type="radio" class="btn-check" name="gender" id="female" autocomplete="off"
+                                        required />
+                                    <label class="btn btn-sm btn-outline-secondary" for="female">Female</label>
+
+                                    <input type="radio" class="btn-check" name="gender" id="secret" autocomplete="off"
+                                        required />
+                                    <label class="btn btn-sm btn-outline-secondary" for="secret">Secret</label>
+                                    <div class="valid-feedback mv-up">
+                                        You selected a gender!
+                                    </div>
+                                    <div class="invalid-feedback mv-up">
+                                        Please select a gender!
+                                    </div>
+                                </div>
+
+                                <div class="form-check" style="padding-left: 0;">
+                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck"
+                                        required />
+                                    <label class="form-check-label">I confirm that all data are correct</label>
+                                    <div class="invalid-feedback">
+                                        Please confirm that the entered data are all correct!
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12" style="font-style: italic;padding-left: 0;">
+                                    <p>
+                                        By entering your number and checking this box, you agree
+                                        to receive promos and news via text message. Text message
+                                        consent is not required to make a purchase. Message
+                                        frequency various. Message and data rates may apply. See
+                                        Term of Use and Privacy Policy. By clicking the "Register"
+                                        button, you are creating a account and indicating that you
+                                        agree to us Terms of Use and Privacy Policy.
+                                    </p>
+                                </div>
+
+                                <div class="form-button mt-3" style="text-align: center" style="padding-left: 0;">
+                                    <button id="submit" type="submit" class="btn btn-primary">
+                                        Register
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function register() {
+                var uname = document.getElementById("name").value;
+                var upassword = document.getElementById("password").value;
+                var ucfpassword = document.getElementById("cfpassword").value;
+
+                if (upassword == ucfpassword && upassword != "") {
+                    localStorage.setItem("username", uname);
+                    localStorage.setItem("password", upassword);
+                    alert("Register success!");
+                    return true;
+                } else {
+                    alert("Please check your register fields!");
+                    return false;
+                }
+            }
+        </script>
+        <script>
+            (function () {
+                "use strict";
+                const forms = document.querySelectorAll(".requires-validation");
+                Array.from(forms).forEach(function (form) {
+                    form.addEventListener(
+                        "submit",
+                        function (event) {
+                            if (!form.checkValidity()) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+
+                            form.classList.add("was-validated");
+                        },
+                        false
+                    );
+                });
+            })();
+        </script>
+    </section>
+    <div class="ticker">
+        <p align="right" id="ticker-text">Current date, time, and location</p>
+        <script>
+            const ticker = document.getElementById("ticker-text");
+
+            function updateTicker() {
+                const now = new Date();
+                const date = now.getDate().toString().padStart(2, "0");
+                const month = (now.getMonth() + 1).toString().padStart(2, "0");
+                const year = now.getFullYear();
+                const time = now.toLocaleTimeString();
+
+                ticker.innerHTML = `${date}/${month}/${year} ${time}`;
+            }
+            updateTicker();
+            setInterval(updateTicker, 1000);
+        </script>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>Copyright &copy; 2023 Your Company Name</p>
+            </div>
+            <div class="footer-right">
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+  <!-- jQuery library -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
+  <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.png" />
+  <title>Car Breezy</title>
+  <link rel="stylesheet" href="./SourceCode/styles.css" />
+  <script>
+    var app = angular.module("myApp", []);
+    app.controller("customersCtrl", function ($scope, $http) {
+      $http.get("data.json").then(function (response) {
+        $scope.cars = response.data;
+      });
+    });
+  </script>
+  <script src="./JS/script.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="customersCtrl">
+  <header>
+    <div class="page-header sticky-header-nav" id="navbar">
+      <!-- Top of navbar-->
+      <div class="header-contact">
+        <div class="container-max-xl p-0">
+          <div class="contact-info">
+            <div class="contact-text">
+              <span>Support & Contact Us</span>
+              <span>:</span>
+              <span>
+                <span class="fa fa-phone"></span>
+                <span>035 477 8644</span>
+              </span>
+              <span>
+                <span class="fa fa-envelope"></span>
+                <a href="mailto:support@carbreezy.com"><span>support@carbreezy.com</span></a>
+                <a id="signUp" href="./SourceCode/login.html">
+                  Sign In
+                </a>
+                <span> | </span>
+                <a id="signUp" href="./SourceCode/Register.html">
+                  Sign Up
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of top navbar-->
+
+      <!--Navbar and logo-->
+      <div class="header-navigation">
+        <div class="logo">
+          <a href="index.html">
+            <img src="./img/logo.png" alt="carbreezy" style="max-height: 55px; width: auto" />
+          </a>
+          <ul id="navlist">
+            <li>
+              <button>
+                <a href="index.html" style="color: black"><span class="fa fa-home" style="font-size: 36px"></span></a>
+              </button>
+            </li>
+            <li>
+              <button id="navbar-btn">
+                <a href="./SourceCode/shopCar.html" style="color: black">Shop Car</a>
+              </button>
+            </li>
+            <li>
+              <button id="navbar-btn">
+                <a href="#" style="color: black">New</a>
+              </button>
+            </li>
+            <li>
+              <button id="navbar-btn">
+                <a href="#" style="color: black">Used</a>
+              </button>
+            </li>
+            <li>
+              <button id="navbar-btn">
+                <a href="#" style="color: black">Brands</a>
+              </button>
+            </li>
+            <li>
+              <button id="navbar-btn">
+                <a href="#" style="color: black">Gallery</a>
+              </button>
+            </li>
+          </ul>
+          <script>
+            var buttons = document.querySelectorAll("li button");
+            for (var i = 1; i < buttons.length; i++) {
+              buttons[i].addEventListener("click", function () {
+                var link = this.querySelector("a");
+                link.style.color = "blue";
+              });
+            }
+          </script>
+        </div>
+      </div>
+      <!--End of Navbar and logo-->
+    </div>
+
+    <!-- Banner goes here-->
+    <div style="
+          width: 100%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          min-height: 600px;
+          background-image: url('./img/indexBanner.jpg');
+        ">
+      <div class="text-container-banner">
+        <div class="col-sm-6 spacing-reset">
+          <div class="content-default">
+            <div class="text-content-container">
+              <h1 style="font-weight: 550">
+                BUY YOUR CAR
+                <br />
+                IN A BREEZE
+              </h1>
+              <p style="font-weight: 400; font-size: 15pt">
+                Lifetime Warranty + 7-Day Returns
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of banner-->
+  </header>
+  <section>
+    <button class="back-to-top">^</button>
+    <!-- First Section -->
+    <div class="container" id="carousel-index">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>New</h2>
+          <div id="carousel1" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol style="z-index: -1" class="carousel-indicators">
+              <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel1" data-slide-to="1"></li>
+              <li data-target="#carousel1" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Slides -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img id="imageSection" src="./SourceCode/imgcars/SUV/0/img1.jpg" alt="Acura MDX 4.5L" />
+                <div style="z-index: 0" class="carousel-caption">
+                  <h3>Acura MDX 4.5L</h3>
+                  <p>White Diamond Pearl</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img id="imageSection" src="./SourceCode/imgcars/SUV/0/img2.jpg" alt="Acura MDX 4.5L" />
+                <div style="z-index: 0" class="carousel-caption">
+                  <h3>Acura MDX 4.5L</h3>
+                  <p>White Diamond Pearl</p>
+                </div>
+              </div>
+              <div style="z-index: 0" class="carousel-item">
+                <img id="imageSection" src="./SourceCode/imgcars/SUV/0/img3.jpg" alt="Acura MDX 4.5L" />
+                <div class="carousel-caption">
+                  <h3>Acura MDX 4.5L</h3>
+                  <p>White Diamond Pearl</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <a style="z-index: 0" class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a style="z-index: 0" class="carousel-control-next" href="#carousel1" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+          <button id="viewmore-btn" class="btn btn-primary">View More</button>
+        </div>
+
+        <div class="col-md-4">
+          <h2>Used</h2>
+          <div id="carousel2" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol style="z-index: -1" class="carousel-indicators">
+              <li data-target="#carousel2" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel2" data-slide-to="1"></li>
+              <li data-target="#carousel2" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Slides -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img id="imageSection" src="./SourceCode/imgcars/SUV/0/img1.jpg" alt="Acura MDX 4.5L" />
+                <div style="z-index: 0" class="carousel-caption">
+                  <h3>Acura MDX 4.5L</h3>
+                  <p>White Diamond Pearl</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img id="imageSection" src="./SourceCode/imgcars/SUV/0/img2.jpg" alt="Acura MDX 4.5L" />
+                <div style="z-index: 0" class="carousel-caption">
+                  <h3>Acura MDX 4.5L</h3>
+                  <p>White Diamond Pearl</p>
+                </div>
+              </div>
+              <div style="z-index: 0" class="carousel-item">
+                <img id="imageSection" src="./SourceCode/imgcars/SUV/0/img3.jpg" alt="Acura MDX 4.5L" />
+                <div class="carousel-caption">
+                  <h3>Acura MDX 4.5L</h3>
+                  <p>White Diamond Pearl</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <a style="z-index: 0" class="carousel-control-prev" href="#carousel2" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a style="z-index: 0" class="carousel-control-next" href="#carousel2" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          <button id="viewmore-btn" class="btn btn-primary">View More</button>
+        </div>
+
+        <div class="col-md-4">
+          <h2>Brands</h2>
+          <div id="carousel3" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol style="z-index: -1" class="carousel-indicators">
+              <li data-target="#carousel3" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel3" data-slide-to="1"></li>
+              <li data-target="#carousel3" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Slides -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img id="imageSection" src="./SourceCode/imgcars/SUV/0/img1.jpg" alt="Acura MDX 4.5L" />
+                <div style="z-index: 0" class="carousel-caption">
+                  <h3>Acura MDX 4.5L</h3>
+                  <p>White Diamond Pearl</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img id="imageSection" src="./SourceCode/imgcars/SUV/0/img2.jpg" alt="Acura MDX 4.5L" />
+                <div style="z-index: 0" class="carousel-caption">
+                  <h3>Acura MDX 4.5L</h3>
+                  <p>White Diamond Pearl</p>
+                </div>
+              </div>
+              <div style="z-index: 0" class="carousel-item">
+                <img id="imageSection" src="./SourceCode/imgcars/SUV/0/img3.jpg" alt="Acura MDX 4.5L" />
+                <div class="carousel-caption">
+                  <h3>Acura MDX 4.5L</h3>
+                  <p>White Diamond Pearl</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <a style="z-index: 0" class="carousel-control-prev" href="#carousel3" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a style="z-index: 0" class="carousel-control-next" href="#carousel3" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          <button id="viewmore-btn" class="btn btn-primary">View More</button>
+        </div>
+      </div>
+    </div>
+    <!-- End of First Section -->
+
+    <!-- Second section -->
+    <div class="textBG" style="
+          background-repeat: no-repeat;
+          background-size: cover;
+          min-height: 515px;
+          background-image: url('https://pictures.dealer.com/c/carbreezy/0345/a5cc29cb455c352bad91b235345d2599x.jpg?impolicy=downsize_bkpt&w=1920');
+          background-position: center center;
+        ">
+      <div id="carBreezy-cover">
+        <div class="col-sm-6 spacing-reset backgrouund-white">
+          <div id="text-cover">
+            <h3 style="font-weight: 600">CARBREEZY COVERED</h3>
+            <div class="text-container-section">
+              <div><br /></div>
+              <div style="font-family: 'Lato', sans-serif; font-size: 13pt">
+                All CarBreezy vehicles include a lifetime powertrain warranty
+                which covers the engine, transmission, drive axle, and stand
+                alone seals and gaskets as well as ten years of roadside
+                assistance covering towing, flat tire change, battery service,
+                lockout assistance, fuel, oil, and water delivery.
+              </div>
+              <div><br /></div>
+              <div style="font-family: 'Lato', sans-serif; font-size: 13pt">
+                No other online car buying platform offers these kinds of
+                benefits.
+              </div>
+            </div>
+          </div>
+          <div id="search-link-button">
+            <div>
+              <div id="button-container" style="
+                    background-position: center center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                  "></div>
+            </div>
+            <div id="search-vehicle-2" style="overflow: hidden">
+              <a href="./SourceCode/shopCar.html" class="btn btn-primary">Search All Vehicle</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of second section -->
+
+    <!-- Third section -->
+    <div style="background-color: white">
+      <div id="container-table">
+        <div id="table-header">
+          <div style="text-align: center">A COMPARISON</div>
+          <div style="text-align: center">
+            <font size="6">BREEZING PAST THE COMPETITION</font>
+          </div>
+          <div><br /></div>
+        </div>
+        <style>
+          table {
+            table-layout: fixed;
+            width: 100%;
+          }
+
+          td {
+            width: 25%;
+            text-align: center;
+            border: 1px solid;
+            padding: 10px;
+          }
+        </style>
+        <div id="table-index">
+          <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+          <table>
+            <tr>
+              <td></td>
+              <td style="word-wrap: break-word;"><b>CARBREEZY</b></td>
+              <td style="word-wrap: break-word;"><b>CARVANA</b></td>
+              <td style="word-wrap: break-word;"><b>CARMAX</b></td>
+            </tr>
+            <tr>
+              <td>
+                <font size="2">Lifetime Powertrain Warranty</font>
+              </td>
+              <td>
+                <font size="2" color="#4FB948"><i class="fas fa-check-circle"></i></font>
+              </td>
+              <td>
+                <font size="2" color="#ff0000"><i class="fa fa-remove"></i> (only 100 days)</font>
+              </td>
+              <td>
+                <font size="2" color="#ff0000"><i class="fa fa-remove"></i> (only 90 days)</font>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <font size="2">Roadside Assistance</font>
+              </td>
+              <td>
+                <font size="2" color="#4FB948"><i class="fas fa-check-circle"></i>(10 years!)
+                </font>
+              </td>
+              <td>
+                <font size="2" color="#ff0000"><i class="fa fa-remove"></i></font>
+              </td>
+              <td>
+                <font size="2" color="#ff0000"><i class="fa fa-remove"></i></font>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <font size="2">Locally Owned</font>
+              </td>
+              <td>
+                <font size="2" color="#4FB948"><i class="fas fa-check-circle"></i></font>
+              </td>
+              <td>
+                <font size="2" color="#ff0000"><i class="fa fa-remove"></i></font>
+              </td>
+              <td>
+                <font size="2" color="#ff0000"><i class="fa fa-remove"></i></font>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <font size="2">Supports Local Community</font>
+              </td>
+              <td>
+                <font size="2" color="#4FB948"><i class="fas fa-check-circle"></i></font>
+              </td>
+              <td>
+                <font size="2" color="#ff0000"><i class="fa fa-remove"></i></font>
+              </td>
+              <td>
+                <font size="2" color="#ff0000"><i class="fa fa-remove"></i></font>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <font size="2">Service After the Sale</font>
+              </td>
+              <td>
+                <font size="2" color="#4FB948"><i class="fas fa-check-circle"></i>(We'll pair you with a
+                  local dealer partner)</font>
+              </td>
+              <td>
+                <font size="2" color="#ff0000"><i class="fa fa-remove"></i></font>
+              </td>
+              <td>
+                <font size="2" color="#ff0000"><i class="fa fa-remove"></i></font>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <font size="2">Money-Back Guarantee</font>
+              </td>
+              <td>
+                <font size="2" color="#4FB948"><i class="fas fa-check-circle"></i></font>
+              </td>
+              <td>
+                <font size="2" color="#4FB948"><i class="fas fa-check-circle"></i></font>
+              </td>
+              <td>
+                <font size="2" color="#4FB948"><i class="fas fa-check-circle"></i></font>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <font size="2">$0 Delivery Fee</font>
+              </td>
+              <td>
+                <font size="2" color="#4FB948"><i class="fas fa-check-circle"></i>(Within local
+                  market)</font>
+              </td>
+              <td>
+                <font size="2" color="#4FB948"><i class="fas fa-check-circle"></i>(Within local
+                  market)</font>
+              </td>
+              <td>
+                <font size="2" color="#4FB948"><i class="fas fa-check-circle"></i>(Within local
+                  market)</font>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <font size="2">$0 Deposit Required</font>
+              </td>
+              <td>
+                <font size="2" color="#4FB948"><i class="fas fa-check-circle"></i></font>
+              </td>
+              <td>
+                <font size="2" color="#4FB948"><i class="fas fa-check-circle"></i></font>
+              </td>
+              <td>
+                <font size="2" color="#4FB948"><i class="fas fa-check-circle"></i></font>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- End of Third section -->
+
+    <!-- Count number of visitors -->
+    <div id="visitor-count">
+      You are visitor number <span id="count">0</span>
+    </div>
+  </section>
+  <!--Show date and time follow dd/mm/yyyy hh:mm:ss format-->
+  <div class="ticker">
+    <p align="right" id="ticker-text">Current date, time, and location</p>
+    <script>
+      const ticker = document.getElementById("ticker-text");
+
+      function updateTicker() {
+        const now = new Date();
+        const date = now.getDate().toString().padStart(2, "0");
+        const month = (now.getMonth() + 1).toString().padStart(2, "0");
+        const year = now.getFullYear();
+        const time = now.toLocaleTimeString();
+
+        ticker.innerHTML = `${date}/${month}/${year} ${time}`;
+      }
+
+      updateTicker();
+      setInterval(updateTicker, 1000);
+    </script>
+  </div>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <p>Copyright &copy; 2023 Your Company Name</p>
+      </div>
+      <div class="footer-right">
+        <ul class="footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- Latest compiled and minified JavaScript -->
+  <!-- jQuery library -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

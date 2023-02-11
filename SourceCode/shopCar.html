@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+  <!-- jQuery library -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.png" />
+  <title>Inventory</title>
+  <link rel="stylesheet" href="stylesProduct.css" />
+  <script src="../JS/script.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="customersCtrl">
+  <header>
+    <div class="page-header sticky-header-nav" id="navbar">
+      <!-- Top of navbar-->
+      <div class="header-contact">
+        <div class="container-max-xl p-0">
+          <div class="contact-info">
+            <div class="contact-text">
+              <span>Support & Contact U </span>
+              <span> </span>
+              <span>
+                <span class="fa fa-phone" </span>
+                <span>035 477 864 </span>
+            </span>
+              <span>
+                <span class="fa fa-envelope" </span>
+                <a href="mailto:support@carbreezy.com"><span>support@carbreezy.co </span></a>
+                <a id="signUp" href="login.html"> Sign In </a>
+                <span> | </span>
+                <a id="signUp" href="Register.html"> Sign Up </a>
+            </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of top navbar-->
+
+      <!--Navbar and logo-->
+      <div class="header-navigation">
+        <div class="logo">
+          <a href="../index.html">
+            <img src="../img/logo.png" alt="carbreezy" style="max-height: 55px; width: auto" />
+          </a>
+          <ul id="navlist">
+            <li>
+              <button>
+                <a href="../index.html" style="color: black"><span class="fa fa-home"
+                    style="font-size: 36px" </span></a>
+              </button>
+            </li>
+            <li>
+              <button id="navbar-btn">
+                <a href="shopCar.html" style="color: black">Shop Car</a>
+              </button>
+            </li>
+            <li>
+              <button id="navbar-btn">
+                <a href="#" style="color: black">New</a>
+              </button>
+            </li>
+            <li>
+              <button id="navbar-btn">
+                <a href="#" style="color: black">Used</a>
+              </button>
+            </li>
+            <li>
+              <button id="navbar-btn">
+                <a href="#" style="color: black">Brands</a>
+              </button>
+            </li>
+            <li>
+              <button id="navbar-btn">
+                <a href="#" style="color: black">Gallery</a>
+              </button>
+            </li>
+          </ul>
+          <script>
+            var buttons = document.querySelectorAll("li button");
+            for (var i = 1; i < buttons.length; i++) {
+              buttons[i].addEventListener("click", function () {
+                var link = this.querySelector("a");
+                link.style.color = "blue";
+              });
+            }
+          </script>
+        </div>
+      </div>
+      <!--End of Navbar and logo-->
+    </div>
+
+    <!-- Banner goes here-->
+    <div style="
+          width: 100%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          min-height: 600px;
+          background-image: url('../img/indexBanner.jpg');
+        ">
+      <div class="text-container-banner">
+        <div class="col-sm-6 spacing-reset">
+          <div class="content-default">
+            <div class="text-content-container">
+              <h1 style="font-weight: 550">
+                BUY YOUR CAR
+                <br />
+                IN A BREEZE
+              </h1>
+              <p style="font-weight: 400; font-size: 15pt">
+                Lifetime Warranty + 7-Day Returns
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of banner-->
+  </header>
+  <section>
+    <!--Search bar-->
+    <div class="container">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-10 searchBar" style="padding: 5px 0 0 40px; margin-top: 20px; width: 100%">
+        <input ng-model="searchtxt" type="text" placeholder="Search your car ..."
+          style="border-radius: 4px; padding: 4px; width: 74%" />
+      </div>
+    </div>
+    <!--End of Search bar-->
+
+    <!--Filter and display img-->
+    <div class="container">
+      <!--Filter-->
+      <div class="col-sm-2">
+        <div class="filterBar">
+          <h3 style="font-weight: 600; padding-bottom: 30px; font-size: 18pt;">Filter :</h3>
+          <ul style="font-size: 15pt;">
+            <li>
+              <input type="radio" name="filterRadio" data-ng-model="filterRadio" value="SUV" />
+              <label for="SUV">SUV</label>
+            </li>
+            <li>
+              <input type="radio" name="filterRadio" data-ng-model="filterRadio" value="Convertibles" />
+              <label for="Convertibles">Convertibles</label>
+            </li>
+            <li>
+              <input type="radio" name="filterRadio" data-ng-model="filterRadio" value="Coupe" />
+              <label for="Coupe">Coupe</label>
+            </li>
+            <li>
+              <input type="radio" name="filterRadio" data-ng-model="filterRadio" value="Truck" />
+              <label for="Truck">Truck</label>
+            </li>
+            <li>
+              <input type="radio" name="filterRadio" data-ng-model="filterRadio" value="Hatchbacks" />
+              <label for="Hatchbacks">Hatchbacks</label>
+            </li>
+            <li>
+              <input type="radio" name="filterRadio" data-ng-model="filterRadio" value="Sedan" />
+              <label for="Sedan">Sedan</label>
+            </li>
+            <li>
+              <input type="radio" name="filterRadio" data-ng-model="filterRadio" value="Other" />
+              <label for="Other">Other</label>
+            </li>
+            <li>
+              <input type="radio" name="filterRadio" data-ng-model="filterRadio" value="" />
+              <label for="Sedan">All</label>
+            </li>
+            <li>
+              <label for="sortPrice">Sort: </label>
+              <select ng-model="sortPrice">
+                <option value="-price">Increase by price</option>
+                <option value="price">Decrease by price</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--End of filter-->
+
+      <!--Display img-->
+      <section class="section-1 col-sm-10" style="padding-left: 20px">
+
+        <div class="card" ng-repeat="x in cars | filter:filterRadio | filter:searchtxt | orderBy:sortPrice"
+          ng-click="openModal(x)">
+          <div id="carouselExampleControls-{{x.id}}" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src=".{{ x.img1 }}" class="d-block w-100" alt="img1" />
+              </div>
+              <div class="carousel-item">
+                <img src=".{{ x.img2 }}" class="d-block w-100" alt="img2" />
+              </div>
+              <div class="carousel-item">
+                <img src=".{{ x.img3 }}" class="d-block w-100" alt="img3" />
+              </div>
+            </div>
+            <button style="z-index: 0" class="carousel-control-prev" type="button"
+              data-target="#carouselExampleControls-{{x.id}}" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true" </span>
+              <span class="sr-only">Previou </span>
+            </button>
+            <button style="z-index: 0" class="carousel-control-next" type="button"
+              data-target="#carouselExampleControls-{{x.id}}" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true" </span>
+              <span class="sr-only">Nex </span>
+            </button>
+          </div>
+          <div class="vehicle-information">
+            <div>
+              <h2 class="name-model">
+                <p id="brand-info">{{ x.brand }}</p>
+                <p id="model-info">{{ x.model }}</p>
+              </h2>
+              <p id="price-info">{{ x.price | currency:$:0 }}</p>
+            </div>
+
+            <div id="tab-content">
+              <table id="vehicle-description">
+                <tr>
+                  <td>OOD: {{ x.ODD }}</td>
+                  <td id="col-left">Color: {{ x.color }}</td>
+                </tr>
+                <tr style="height: 10px;background-color: #FFFFFF;" class="blank_row">
+                  <td colspan="2"></td>
+                </tr>
+                <tr>
+                  <td>Seat: {{ x.seats }}</td>
+                  <td id="col-left">Transmission: {{ x.transmission }}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" style="font-weight: 600;color: #4eb947;" id="exampleModalLabel">{{
+                  selectedCar.brand }} {{ selectedCar.model }}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times </span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="col-sm-12" style="margin-bottom: 20px;"><img style="width: 100%;"
+                    src=".{{ selectedCar.img1 }}" alt=""></div>
+                <div class="col-sm-6">
+                  <ul>
+                    <li class="popup-text"><span style="font-weight: 650;padding-right:3px ;">Brand: </span> {{ selectedCar.brand }}</li>
+                    <li class="popup-text"><span style="font-weight: 650;padding-right:3px ;">Model: </span>{{ selectedCar.model }}</li>
+                    <li class="popup-text"><span style="font-weight: 650;padding-right:3px ;">Status: </span>{{ selectedCar.status }}</li>
+                    <li class="popup-text"><span style="font-weight: 650;padding-right:3px ;">Type: </span>{{ selectedCar.type }}</li>
+                    <li class="popup-text"><span style="font-weight: 650;padding-right:3px ;">OOD: </span>{{ selectedCar.ODD }}</li>
+                    <li class="popup-text"><span style="font-weight: 650;padding-right:3px ;">Color: </span> {{ selectedCar.color }}</li>
+                  </ul>
+                </div>
+                <div class="col-sm-6">
+                  <ul>
+                    <li class="popup-text"><span style="font-weight: 650;padding-right:3px ;">Seats: </span>{{ selectedCar.seats }}</li>
+                    <li class="popup-text"><span style="font-weight: 650;padding-right:3px ;">Transmission: </span>{{
+                      selectedCar.transmission }}</li>
+                    <li class="popup-text"><span style="font-weight: 650;padding-right:3px ;">Engine: </span>{{ selectedCar.engine }}</li>
+                    <li class="popup-text"><span style="font-weight: 650;padding-right:3px ;">VIN: </span>{{ selectedCar.VIN }}</li>
+                    <li class="popup-text"><span style="font-weight: 650;padding-right:3px ;">Price: </span>{{ selectedCar.price | currency:$:0 }}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--End of display img-->
+    </div>
+    <!--End of filter and display img-->
+    <div id="visitor-count">
+      You are visitor number <span id="count"> </span>
+    </div>
+  </section>
+  <button class="back-to-top">^</button>
+  <div class="ticker">
+    <p align="right" id="ticker-text">Current date, time, and location</p>
+    <script>
+      const ticker = document.getElementById("ticker-text");
+
+      function updateTicker() {
+        const now = new Date();
+        const date = now.getDate().toString().padStart(2, "0");
+        const month = (now.getMonth() + 1).toString().padStart(2, "0");
+        const year = now.getFullYear();
+        const time = now.toLocaleTimeString();
+
+        ticker.innerHTML = `${date}/${month}/${year} ${time}`;
+      }
+
+      updateTicker();
+      setInterval(updateTicker, 1000);
+    </script>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <p>Copyright &copy; 2023 Your Company Name</p>
+      </div>
+      <div class="footer-right">
+        <ul class="footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
