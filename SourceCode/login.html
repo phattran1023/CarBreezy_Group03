@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.png" />
+    <title>Login</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .loginContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-top: 132px;
+            margin-top: 30px;
+        }
+
+        .loginForm {
+            margin-right: 20px;
+            box-sizing: border-box;
+            padding: 20px 20px;
+            width: 40%;
+            min-height: 550px;
+            border: 2px green solid;
+            background-color: white;
+        }
+
+        .loginForm button {
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        .loginForm h1 {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 30pt;
+            color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 600;
+        }
+
+        @media (max-width: 800px) {
+            div.loginImg {
+                display: none;
+            }
+
+            div.loginForm {
+                flex: 100%;
+            }
+        }
+
+        /* .fa {
+        padding: 10px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        border-radius: 50%;
+        } */
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-facebook {
+            background: #3b5998;
+            color: white;
+            padding: 10px;
+            font-size: 30px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50%;
+        }
+
+        .fa-twitter {
+            background: #55acee;
+            color: white;
+            padding: 10px;
+            font-size: 30px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50%;
+        }
+
+        .fa-google {
+            background: #dd4b39;
+            color: white;
+            padding: 10px;
+            font-size: 30px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50%;
+        }
+
+        .socialIcon a {
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .socialIcon p {
+            font-size: 10pt;
+            font-style: italic;
+            margin-top: 10pt;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="page-header sticky-header-nav" id="navbar">
+            <!-- Top of navbar-->
+            <div class="header-contact">
+                <div class="container-max-xl p-0">
+                    <div class="contact-info">
+                        <div class="contact-text">
+                            <span>Support & Contact Us</span>
+                            <span>:</span>
+                            <span>
+                                <span class="fa fa-phone"></span>
+                                <span>035 477 8644</span>
+                            </span>
+                            <span>
+                                <span class="fa fa-envelope"></span>
+                                <a href="mailto:support@carbreezy.com"><span>support@carbreezy.com</span></a>
+                                <a id="signUp" href="login.html"> Sign In </a>
+                                <span> | </span>
+                                <a id="signUp" href="Register.html"> Sign Up </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of top navbar-->
+
+            <!--Navbar and logo-->
+            <div class="header-navigation">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../img/logo.png" alt="carbreezy" style="max-height: 55px; width: auto" />
+                    </a>
+                    <ul id="navlist">
+                        <li>
+                            <button>
+                                <a href="../index.html" style="color: black"><span class="fa fa-home"
+                                        style="font-size: 36px"></span></a>
+                            </button>
+                        </li>
+                        <li>
+                            <button id="navbar-btn">
+                                <a href="shopCar.html" style="color: black">Shop Car</a>
+                            </button>
+                        </li>
+                        <li>
+                            <button id="navbar-btn">
+                                <a href="#" style="color: black">New</a>
+                            </button>
+                        </li>
+                        <li>
+                            <button id="navbar-btn">
+                                <a href="#" style="color: black">Used</a>
+                            </button>
+                        </li>
+                        <li>
+                            <button id="navbar-btn">
+                                <a href="#" style="color: black">Brands</a>
+                            </button>
+                        </li>
+                        <li>
+                            <button id="navbar-btn">
+                                <a href="#" style="color: black">Gallery</a>
+                            </button>
+                        </li>
+                    </ul>
+                    <script>
+                        var buttons = document.querySelectorAll("li button");
+                        for (var i = 1; i < buttons.length; i++) {
+                            buttons[i].addEventListener("click", function () {
+                                var link = this.querySelector("a");
+                                link.style.color = "blue";
+                            });
+                        }
+                    </script>
+                </div>
+            </div>
+            <!--End of Navbar and logo-->
+        </div>
+
+        <!-- Banner goes here-->
+        <!-- <div style="
+          width: 100%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          min-height: 600px;
+          background-image: url('./img/indexBanner.jpg');
+        ">
+            <div class="text-container-banner">
+                <div class="col-sm-6 spacing-reset">
+                    <div class="content-default">
+                        <div class="text-content-container">
+                            <h1 style="font-weight: 550">
+                                BUY YOUR CAR
+                                <br />
+                                IN A BREEZE
+                            </h1>
+                            <p style="font-weight: 400; font-size: 15pt">
+                                Lifetime Warranty + 7-Day Returns
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- End of banner-->
+    </header>
+    <section>
+        <div class="loginContainer">
+            <!-- <div class="loginImg">
+                <img class="loginImg" src="./img/indexBanner.jpg" />
+            </div> -->
+
+            <div class="loginForm">
+                <div class="row">
+                    <div class="col text-center">
+                        <h1>Welcome back!
+                        </h1>
+                    </div>
+                </div>
+                <h4 style="text-align: center;font-weight: 500;">Sign in to your account using your username and
+                    password.</h4>
+                <br><br>
+                <form onsubmit="return validate()">
+                    <label class="form-check-label" for="UserName">User Name:</label>
+                    <input class="form-control" id="loginName" type="text" autofocus /> <br />
+                    <label class="form-check-label" for="Password">Password:</label>
+                    <input class="form-control" id="loginPass" type="password" /> <br />
+                    <div class="row">
+                        <div class="col text-center"><br>
+                            <button class="btn btn-primary" id="submit" type="submit">
+                                Login
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <script>
+                    function validate() {
+                        var UserName = document.getElementById("loginName").value;
+                        var Password = document.getElementById("loginPass").value;
+
+                        if (
+                            UserName == localStorage.username &&
+                            Password == localStorage.password
+                        ) {
+                            alert("Login successful!");
+                        } else {
+                            alert(
+                                "username and/or password do not match! " +
+                                "| your id: " +
+                                localStorage.username +
+                                " | pas: " +
+                                localStorage.password
+                            );
+                            return false;
+                        }
+                    }
+                </script>
+                <div class="socialIcon row">
+                    <div class="col text-center">
+                        <br>
+                        <p class="wthree w3l">
+                            Fast Signup With Your Favourite Social Profile
+                        </p>
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-google"></a>
+                    </div>
+                </div>
+                <p style="text-align: center;">New here ? <a style="color: #63bf58;text-decoration: underline #63bf58;"
+                        href="Register.html">Create an account</a></p>
+            </div>
+        </div>
+    </section>
+    <div class="ticker">
+        <p align="right" id="ticker-text">Current date, time, and location</p>
+        <script>
+            const ticker = document.getElementById("ticker-text");
+
+            function updateTicker() {
+                const now = new Date();
+                const date = now.getDate().toString().padStart(2, "0");
+                const month = (now.getMonth() + 1).toString().padStart(2, "0");
+                const year = now.getFullYear();
+                const time = now.toLocaleTimeString();
+
+                ticker.innerHTML = `${date}/${month}/${year} ${time}`;
+            }
+
+            updateTicker();
+            setInterval(updateTicker, 1000);
+        </script>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>Copyright &copy; 2023 Your Company Name</p>
+            </div>
+            <div class="footer-right">
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
