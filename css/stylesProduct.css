@@ -2,6 +2,9 @@
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
+.main{
+  margin-top: 130px;
+}
 /* Header's CSS goes here*/
 .page-header {
   z-index: 1;
@@ -145,7 +148,31 @@ transform: translateY(-0.5px);
 }
 
 /* End of Header's CSS*/
+.searchBar{
+  padding: 5px 0 0 40px;
+  margin-top: 20px;
+  width: 100%;
+}
 
+@import "compass/css3";
+
+.searchBar input[type=text] {
+  @include transition(all 0.30s ease-in-out);
+  outline: none;
+  border-radius: 4px; 
+  padding: 4px; 
+  width: 94%;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+ 
+.searchBar input[type=text]:focus {
+  @include box-shadow(0 0 5px rgba(81, 203, 238, 1));
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgb(26, 151, 45);
+}
 
 /* Section's CSS goes here*/
 #carBreezy-cover {
@@ -227,7 +254,7 @@ transform: translateY(-0.5px);
 .card {
   display: flex;
   float: left;
-  width: 350px;
+  width: 330px;
   height: 500px;
   background-color: #ccc;
   background-color: rgba(255, 255, 255, 0.8);
@@ -325,7 +352,7 @@ transform: translateY(-0.5px);
 }
 
 
-#visitor-count {
+/* #visitor-count {
   position: fixed;
   bottom: 18px;
   right: 67px;
@@ -335,9 +362,9 @@ transform: translateY(-0.5px);
   padding-bottom: 10px;
   padding-left: 10px;
   text-align: justify;
-}
+} */
 
-.back-to-top{
+/* .back-to-top{
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -347,12 +374,12 @@ transform: translateY(-0.5px);
   padding: 10px 15px;
   border-radius: 3px;
   cursor: pointer;
-}
+} */
 
-.back-to-top:hover {
+/* .back-to-top:hover {
   background-color: #44d235;
   color: #333;
-}
+} */
 
 .modal-dialog {
   position: absolute;

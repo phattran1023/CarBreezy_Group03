@@ -5,136 +5,29 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-  <!-- Latest compiled and minified CSS -->
+  <!-- CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
-  <!-- jQuery library -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
-  <!-- Popper JS -->
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <!-- Latest compiled JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.png" />
+  <script src="https://code.angularjs.org/1.8.2/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.8.2/angular-route.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- CDN end-->
+  <script src="./JS/script.js"></script>
+  <script src="./JS/controller.js"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/stylesProduct.css" />
   <title>Inventory</title>
-  <link rel="stylesheet" href="stylesProduct.css" />
-  <script src="../JS/script.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.png" />
 </head>
 
 <body ng-app="myApp" ng-controller="customersCtrl">
-  <header>
-    <div class="page-header sticky-header-nav" id="navbar">
-      <!-- Top of navbar-->
-      <div class="header-contact">
-        <div class="container-max-xl p-0">
-          <div class="contact-info">
-            <div class="contact-text">
-              <span>Support & Contact U </span>
-              <span> </span>
-              <span>
-                <span class="fa fa-phone" </span>
-                <span>035 477 864 </span>
-            </span>
-              <span>
-                <span class="fa fa-envelope" </span>
-                <a href="mailto:support@carbreezy.com"><span>support@carbreezy.co </span></a>
-                <a id="signUp" href="login.html"> Sign In </a>
-                <span> | </span>
-                <a id="signUp" href="Register.html"> Sign Up </a>
-            </span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End of top navbar-->
-
-      <!--Navbar and logo-->
-      <div class="header-navigation">
-        <div class="logo">
-          <a href="../index.html">
-            <img src="../img/logo.png" alt="carbreezy" style="max-height: 55px; width: auto" />
-          </a>
-          <ul id="navlist">
-            <li>
-              <button>
-                <a href="../index.html" style="color: black"><span class="fa fa-home"
-                    style="font-size: 36px" </span></a>
-              </button>
-            </li>
-            <li>
-              <button id="navbar-btn">
-                <a href="shopCar.html" style="color: black">Shop Car</a>
-              </button>
-            </li>
-            <li>
-              <button id="navbar-btn">
-                <a href="#" style="color: black">New</a>
-              </button>
-            </li>
-            <li>
-              <button id="navbar-btn">
-                <a href="#" style="color: black">Used</a>
-              </button>
-            </li>
-            <li>
-              <button id="navbar-btn">
-                <a href="#" style="color: black">Brands</a>
-              </button>
-            </li>
-            <li>
-              <button id="navbar-btn">
-                <a href="#" style="color: black">Gallery</a>
-              </button>
-            </li>
-          </ul>
-          <script>
-            var buttons = document.querySelectorAll("li button");
-            for (var i = 1; i < buttons.length; i++) {
-              buttons[i].addEventListener("click", function () {
-                var link = this.querySelector("a");
-                link.style.color = "blue";
-              });
-            }
-          </script>
-        </div>
-      </div>
-      <!--End of Navbar and logo-->
-    </div>
-
-    <!-- Banner goes here-->
-    <div style="
-          width: 100%;
-          background-repeat: no-repeat;
-          background-size: cover;
-          min-height: 600px;
-          background-image: url('../img/indexBanner.jpg');
-        ">
-      <div class="text-container-banner">
-        <div class="col-sm-6 spacing-reset">
-          <div class="content-default">
-            <div class="text-content-container">
-              <h1 style="font-weight: 550">
-                BUY YOUR CAR
-                <br />
-                IN A BREEZE
-              </h1>
-              <p style="font-weight: 400; font-size: 15pt">
-                Lifetime Warranty + 7-Day Returns
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End of banner-->
-  </header>
-  <section>
+  <div class="main">
     <!--Search bar-->
     <div class="container">
       <div class="col-sm-2"></div>
-      <div class="col-sm-10 searchBar" style="padding: 5px 0 0 40px; margin-top: 20px; width: 100%">
-        <input ng-model="searchtxt" type="text" placeholder="Search your car ..."
-          style="border-radius: 4px; padding: 4px; width: 74%" />
+      <div class="col-sm-10 searchBar">
+        <input ng-model="searchtxt" type="text" placeholder="Search your car ..." />
       </div>
     </div>
     <!--End of Search bar-->
@@ -181,8 +74,8 @@
             <li>
               <label for="sortPrice">Sort: </label>
               <select ng-model="sortPrice">
-                <option value="-price">Increase by price</option>
-                <option value="price">Decrease by price</option>
+                <option value="-price">Decrease by price</option>
+                <option value="price">Increase by price</option>
               </select>
             </li>
           </ul>
@@ -193,10 +86,9 @@
       <!--Display img-->
       <section class="section-1 col-sm-10" style="padding-left: 20px">
 
-        <div class="card" ng-repeat="x in cars | filter:filterRadio | filter:searchtxt | orderBy:sortPrice"
-          ng-click="openModal(x)">
+        <div class="card" ng-repeat="x in cars | filter:filterRadio | filter:searchtxt | orderBy:sortPrice">
           <div id="carouselExampleControls-{{x.id}}" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
+            <div class="carousel-inner" ng-click="openModal(x)">
               <div class="carousel-item active">
                 <img src=".{{ x.img1 }}" class="d-block w-100" alt="img1" />
               </div>
@@ -209,16 +101,16 @@
             </div>
             <button style="z-index: 0" class="carousel-control-prev" type="button"
               data-target="#carouselExampleControls-{{x.id}}" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true" </span>
+              <span class="carousel-control-prev-icon" aria-hidden="true"> </span>
               <span class="sr-only">Previou </span>
             </button>
             <button style="z-index: 0" class="carousel-control-next" type="button"
               data-target="#carouselExampleControls-{{x.id}}" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true" </span>
+              <span class="carousel-control-next-icon" aria-hidden="true"> </span>
               <span class="sr-only">Nex </span>
             </button>
           </div>
-          <div class="vehicle-information">
+          <div class="vehicle-information" ng-click="openModal(x)">
             <div>
               <h2 class="name-model">
                 <p id="brand-info">{{ x.brand }}</p>
@@ -287,31 +179,11 @@
       <!--End of display img-->
     </div>
     <!--End of filter and display img-->
-    <div id="visitor-count">
-      You are visitor number <span id="count"> </span>
-    </div>
-  </section>
-  <button class="back-to-top">^</button>
-  <div class="ticker">
-    <p align="right" id="ticker-text">Current date, time, and location</p>
-    <script>
-      const ticker = document.getElementById("ticker-text");
-
-      function updateTicker() {
-        const now = new Date();
-        const date = now.getDate().toString().padStart(2, "0");
-        const month = (now.getMonth() + 1).toString().padStart(2, "0");
-        const year = now.getFullYear();
-        const time = now.toLocaleTimeString();
-
-        ticker.innerHTML = `${date}/${month}/${year} ${time}`;
-      }
-
-      updateTicker();
-      setInterval(updateTicker, 1000);
-    </script>
   </div>
-
+  <!-- <button class="back-to-top">^</button> -->
+  <button ng-click="scrollToTop()" class="back-to-top">
+    ^
+  </button>
   <footer>
     <div class="footer-container">
       <div class="footer-left">
