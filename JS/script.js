@@ -1,19 +1,4 @@
 
-/* Get data from JSON*/
-
-var app = angular.module('myApp', []);
-app.controller('customersCtrl', function($scope, $http) {
-  $http.get("data.json")
-  .then(function (response) {$scope.cars = response.data;});
-  $scope.sortPrice="price"; 
-  $scope.selectedCar = {};
-
-  $scope.openModal = function(car) {
-    $scope.selectedCar = car;
-    $('#modal').modal('show');
-};       
-});
-
 
 /* Count vissitor*/
 window.onload = function () {
@@ -34,40 +19,20 @@ window.onload = function () {
 };
 /* End of visitor count*/
 
+/* Scroll to top */
+document.addEventListener("DOMContentLoaded", function() {
+  const backToTopButton = document.querySelector(".back-to-top");
 
-/* Function: Roll back to top */
-  document.addEventListener("DOMContentLoaded", function() {
-  window.onscroll = function() {scrollFunction()};
-
-  function scrollFunction() {
-    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-      document.querySelector(".back-to-top").style.display = "block";
-    } else {
-      document.querySelector(".back-to-top").style.display = "none";
-    }
-  }
-
-  document.querySelector(".back-to-top").addEventListener("click", function() {
-    let start = window.pageYOffset;
-    let end = 0;
-    let duration = 500;
-    let startTime = null;
-    let ease = function(t, b, c, d) {
-      t /= d / 2;
-      if (t < 1) return c / 2 * t * t + b;
-      t--;
-      return -c / 2 * (t * (t - 2) - 1) + b;
-    };
-
-    requestAnimationFrame(function animation(timestamp) {
-      if (!startTime) startTime = timestamp;
-      let progress = timestamp - startTime;
-      let y = ease(progress, start, end - start, duration);
-      window.scrollTo(0, y);
-      if (progress < duration) {
-        requestAnimationFrame(animation);
-      }
+  backToTopButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
     });
   });
 });
-/* End of Roll back to top */
+
+
+
+
