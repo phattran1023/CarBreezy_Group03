@@ -33,6 +33,15 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-
+/* Fade in*/
+window.addEventListener("scroll", function() {
+  var boxes = document.querySelectorAll(".fade-in");
+  boxes.forEach(function(box) {
+    var boxCoords = box.getBoundingClientRect();
+    if (boxCoords.top < window.innerHeight && boxCoords.bottom >= 0) {
+      box.style.opacity = 1;
+    }
+  });
+});
 
 
