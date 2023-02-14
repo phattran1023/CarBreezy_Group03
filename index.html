@@ -89,6 +89,11 @@
                 <a href="#" style="color: black">Gallery</a>
               </button>
             </li>
+            <li id="toggle-cart-btn">
+              <button >
+                <span style="font-size: 24px;align-items: center;" class="fa fa-shopping-basket" aria-hidden="true"></span>
+              </button>
+            </li>
           </ul>
           <script>
             var buttons = document.querySelectorAll("li button");
@@ -97,7 +102,7 @@
                 var link = this.querySelector("a");
                 link.style.color = "blue";
               });
-            }
+            };
           </script>
         </div>
       </div>
@@ -110,7 +115,7 @@
     <button class="back-to-top">^</button>
   </body>
   <footer>
-    
+
     <!-- Count number of visitors -->
     <div id="visitor-count">
       You are visitor number <span id="count">0</span>
