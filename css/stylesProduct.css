@@ -5,149 +5,7 @@
 .main{
   margin-top: 130px;
 }
-/* Header's CSS goes here*/
-.page-header {
-  z-index: 1;
-  background-color: rgb(255, 255, 255);
-  border-bottom: 1px solid;
-}
-.page-header.sticky-header-nav {
-  width: 100%;
-}
-.container-max-xl {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 12px;
-  padding-right: 12px;
-}
 
-#header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
-
-.contact-info {
-  margin:0;
-  text-align: right;
-  background-image: linear-gradient(to right, #49e937 , #2f6829);
-}
-.contact-info {
-  position: relative;
-}
-.contact-text {
-    padding: 3px;
-    font-size: 10pt;
-    color: aliceblue;
-}
-.contact-text a {
-    color: aliceblue;
-}
-#signUp {
-  font-size: 10pt;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-
-.header-navigation {
-    height: max-content;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 48px ;
-    padding-right: 48px;
-}
-ul {
-  margin: 0;
-  padding: 0;
-}
-ul:hover button {
-  opacity: 0.5;
-}
-
-ul:hover button:hover {
-  opacity: 1;
-}
-
-#navlist {
-    float: right;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-right: 0px;
-    margin: 0;
-}
-#navlist a {
-  float: left;
-}
-#navlist li a:hover {
-  text-decoration: underline rgb(255, 255, 255);
-}
-li {
-    display: inline;
-    list-style-type: square;
-    padding-right: 2px;
-
-}
-button {
-    padding: 10px 20px;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 520;
-    color: #000;
-    background-color: #fff;
-    border: none;
-    border-radius: 7px;
-    transition: all 0.2s ease 0s;
-    cursor: pointer;
-    outline: none;
-    opacity: 1;
-    transition: opacity 0.2s ease-in-out;
-}
-
-/* #navbar-btn:hover {
-background-image: linear-gradient(to right, #3da032 , #71fb61);
-box-shadow: 0px 15px 20px #3a8232;
-color: #fff;
-transform: translateY(-9px);
-opacity: 0.7;
-} */
-
-button:active {
-transform: translateY(-0.5px);
-}
-
-#navbar {
-    position: fixed;
-    top: 0px;
-}
-.text-container-banner {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1440px !important;
-    padding-left: 20px ;
-    padding-right: 48px !important;
-    padding-bottom: 48px !important;
-    padding-top: 230px !important;
-    justify-content: flex-start !important;
-    display: flex !important;
-    z-index: 0;
-}
-.spacing-reset {
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  .col-sm-6 {
-    width: 50%;
-    float: left;
-  }
-.content-default {
-    margin: 0;
-    position: relative;
-
-}
-
-/* End of Header's CSS*/
 .searchBar{
   padding: 5px 0 0 40px;
   margin-top: 20px;
@@ -255,7 +113,7 @@ transform: translateY(-0.5px);
   display: flex;
   float: left;
   width: 330px;
-  height: 500px;
+  height: 460px;
   background-color: #ccc;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
@@ -264,6 +122,7 @@ transform: translateY(-0.5px);
   text-align: center;
   padding: 15px;
   transition: all 0.1s ease-in-out;
+  z-index: 1;
 }
 
 .card:hover {
@@ -351,36 +210,6 @@ transform: translateY(-0.5px);
   width: 60%;
 }
 
-
-/* #visitor-count {
-  position: fixed;
-  bottom: 18px;
-  right: 67px;
-  background-color: #44d235;
-  padding-top: 5px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  text-align: justify;
-} */
-
-/* .back-to-top{
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: none;
-  background-color: #333;
-  color: #fff;
-  padding: 10px 15px;
-  border-radius: 3px;
-  cursor: pointer;
-} */
-
-/* .back-to-top:hover {
-  background-color: #44d235;
-  color: #333;
-} */
-
 .modal-dialog {
   position: absolute;
   top: 50%;
@@ -391,12 +220,88 @@ transform: translateY(-0.5px);
   display: block;
   width: 100%;
 }
+
+#addToCart {
+  margin: 20px 0 20px 0;
+}
+
+.filterBar {
+  position: fixed;
+  top: auto;
+  left: 10px;
+  width: 100%;
+  background-color: #fff;
+  z-index: 0;
+}
+
+#shopping-cart {
+  display: none;
+  position: fixed;;
+  background-color: #ffffff;
+  padding: 10px;
+  z-index: 2;
+  width: 580px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+#shopping-cart table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  margin-top: 20px;
+}
+
+#shopping-cart th {
+  background-color: #46dc36;
+  color: #ffffff;
+  padding: 10px;
+}
+
+#shopping-cart td {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+}
+
+#shopping-cart .quantity {
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+}
+
+#shopping-cart .decrease-btn, #shopping-cart .increase-btn {
+  background-color: #333;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#shopping-cart .decrease-btn:hover, #shopping-cart .increase-btn:hover {
+  background-color: #46dc36;
+  color: #333;
+}
+
+.remove-btn {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 2px 2px;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+
+
 /* Footer CSS goes here*/
 footer {
   background-color: #fff;
   color: #000;
   font-size: 14px;
-  padding: 40px 0;
+  padding: 20px 0;
   text-align: center;
   clear: both;
 }
