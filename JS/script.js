@@ -1,6 +1,15 @@
+/**********************Modal**********************/
+function showImageModal(element) {
+  const modal = new bootstrap.Modal(document.getElementById("imageModal"));
+  const modalImage = modal._element.querySelector(".modal-image");
+  modalImage.src = element.dataset.fullImage;
+  modal.show();
+}
 
 
-/* Count vissitor*/
+/********************** End of Modal **********************/
+
+/*********************** Count vissitor ***********************/
 window.onload = function () {
   // Check if the key "visitorCount" exists in local storage
   if (localStorage.getItem("visitorCount") === null) {
@@ -17,7 +26,7 @@ window.onload = function () {
   document.getElementById("count").innerHTML =
     localStorage.getItem("visitorCount");
 };
-/* End of visitor count*/
+/*********************** End of visitor count ***********************/
 
 /* Scroll to top */
 document.addEventListener("DOMContentLoaded", function() {
