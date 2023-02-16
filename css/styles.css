@@ -225,26 +225,51 @@ transform: translateY(-0.5px);
   max-width: 1920px;
   margin: 0px 0px 40px 0px;
 }
-#imageSection {
-  width: 100%;
+
+.img-cap-h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  margin: 0;
+  text-align: center;
 }
+
+.img-cap-p {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+.img-cap-h5:hover,
+.img-cap-p:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+
 
 #viewmore-btn{
   margin: 10px 0;
-    padding: 10px 20px;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 520;
-    color: #000;
-    background-color: #44d134;
-    border: none;
-    border-radius: 7px;
-    transition: all 0.4s ease 0s;
-    cursor: pointer;
-    outline: none;
-    opacity: 1;
-    transition: opacity 0.2s ease-in-out;
+  padding: 5px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 520;
+  color: #000;
+  background-color: #44d134;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+  outline: none;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
 }
 
 #viewmore-btn:hover {
@@ -252,6 +277,7 @@ transform: translateY(-0.5px);
   transform: translateY(-9px);
   opacity: 1;
 }
+
 
 #visitor-count {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
