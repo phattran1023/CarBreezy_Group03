@@ -23,6 +23,18 @@ app.config(function ($routeProvider) {
     .when("/login", {
       templateUrl: "./HTML/login.html",
       controller: "customersCtrl",
+    })
+    .when("/gallery", {
+      templateUrl: "./HTML/Gallary.html",
+      controller: "customersCtrl",
+    })
+    .when("/new", {
+      templateUrl: "./HTML/new.html",
+      controller: "customersCtrl",
+    })
+    .when("/used", {
+      templateUrl: "./HTML/used.html",
+      controller: "customersCtrl",
     });
 });
 
@@ -31,7 +43,7 @@ app.controller("customersCtrl", function ($scope, $http, $window) {
   $http.get("./db/data.json").then(function (response) {
     $scope.cars = response.data;
   });
-  
+  /*  */
   $scope.sortPrice = "price";
   $scope.selectedCar = {};
   $scope.openModal = function (car) {
