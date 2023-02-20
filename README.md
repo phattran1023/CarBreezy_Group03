@@ -11,13 +11,13 @@
 
 + List of member:
 
-                1. Trần Vĩnh Phát                   Student
-                2. Vũ Hữu Tài                       Student
-                3. Lý Hoài Nam                      Student
+                1. Trần Vĩnh Phát                   Student1429097
+                2. Vũ Hữu Tài                       Student1429106
+                3. Lý Hoài Nam                      Student1429419
 
 ==================================================================
 
-Documentation : https
+Documentation : https://github.com/phattran1023/CarBreezy_Group03/tree/main/document
 
 ==================================================================
 

@@ -238,6 +238,36 @@
 .filterBar input {
   margin-bottom: 20px;
 }
+.filterBar select{
+  display: flex;
+  flex: 100%;
+  margin-right: 10px;
+  padding: 20px 0;
+  border: none;
+}
+@media (max-width: 800px) {
+  .container {
+    padding: 0;
+  }
+  .filterBar {
+    display: flex;
+    flex: 100%;
+    z-index: 2;
+  }
+  .filterBar input {
+    width: 100%;
+    margin: 20px 20px 20px 0px;
+    padding: 5px;
+  }
+  .filterBar ul,h3{
+    display: none;
+  }
+}
+@media (min-width: 480px){
+  .filterBar select{
+    display: none;
+  }
+}
 #shopping-cart {
   display: none;
   position: fixed;;
