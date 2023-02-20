@@ -89,7 +89,19 @@
       <div class="col-sm-2" style="font-size: 8pt;">
         <div class="filterBar">
           <input id="searchBar" ng-model="searchtxt" type="text" placeholder="Search your car ..." />
-            
+          <!--filter hiden-->
+          <select ng-model="filterRadio">
+            <option value="">--Select--</option>
+            <option value="SUV">SUV</option>
+            <option value="Convertibles">Convertibles</option>
+            <option value="Coupe">Coupe</option>
+            <option value="Truck">Truck</option>
+            <option value="Hatchbacks">Hatchbacks</option>
+            <option value="Sedan">Sedan</option>
+            <option value="Other">Other</option>
+            <option value="">All</option>
+          </select>
+          <!--end filter hiden--> 
           <h3 style="font-weight: 600; padding-bottom: 30px; font-size: 18pt">
             Filter :
           </h3>

@@ -69,16 +69,15 @@ ul:hover button:hover {
   opacity: 1;
 }
 
+
 #navlist {
-    float: right;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-right: 0px;
-    margin: 0;
+  float: right;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 0px;
+  margin: 0;
 }
-#navlist a {
-  float: left;
-}
+
 #navlist li a:hover {
   text-decoration: underline rgb(255, 255, 255);
 }
@@ -116,6 +115,11 @@ opacity: 0.7;
 button:active {
 transform: translateY(-0.5px);
 }
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
 
 #navbar {
     position: fixed;
@@ -489,3 +493,8 @@ footer {
   margin-top: 10pt;
 }
 /*End Login css*/
+@media (max-width: 600px) {
+  .card {
+    flex: 100%;
+  }
+}
