@@ -35,6 +35,10 @@ app.config(function ($routeProvider) {
     .when("/used", {
       templateUrl: "./HTML/used.html",
       controller: "customersCtrl",
+    })
+    .when("/aboutUs", {
+      templateUrl: "./HTML/aboutUs.html",
+      controller: "customersCtrl",
     });
 });
 
