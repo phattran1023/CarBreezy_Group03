@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="./css/stylesGallary.css">
 
 </head>
+
 <body>
     <h1>Masonry Gallery</h1>
 
@@ -85,39 +87,56 @@
             </div>
         </div>
     </div>
-     <script>
+    <script>
         var gallery = document.querySelector('#gallery');
-            var getVal = function (elem, style) { return parseInt(window.getComputedStyle(elem).getPropertyValue(style)); };
-            var getHeight = function (item) { return item.querySelector('.content').getBoundingClientRect().height; };
-            var resizeAll = function () {
-                var altura = getVal(gallery, 'grid-auto-rows');
-                var gap = getVal(gallery, 'grid-row-gap');
-                gallery.querySelectorAll('.gallery-item').forEach(function (item) {
-                    var el = item;
-                    el.style.gridRowEnd = "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
-                });
-            };
-            gallery.querySelectorAll('img').forEach(function (item) {
-                item.classList.add('byebye');
-                if (item.complete) {
-                    console.log(item.src);
-                }
-                else {
-                    item.addEventListener('load', function () {
-                        var altura = getVal(gallery, 'grid-auto-rows');
-                        var gap = getVal(gallery, 'grid-row-gap');
-                        var gitem = item.parentElement.parentElement;
-                        gitem.style.gridRowEnd = "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
-                        item.classList.remove('byebye');
-                    });
-                }
-            });
-            window.addEventListener('resize', resizeAll);
+        var getVal = function (elem, style) { return parseInt(window.getComputedStyle(elem).getPropertyValue(style)); };
+        var getHeight = function (item) { return item.querySelector('.content').getBoundingClientRect().height; };
+        var resizeAll = function () {
+            var altura = getVal(gallery, 'grid-auto-rows');
+            var gap = getVal(gallery, 'grid-row-gap');
             gallery.querySelectorAll('.gallery-item').forEach(function (item) {
-                item.addEventListener('click', function () {        
-                    item.classList.toggle('full');        
-                });
+                var el = item;
+                el.style.gridRowEnd = "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
             });
-        </script>
+        };
+        gallery.querySelectorAll('img').forEach(function (item) {
+            item.classList.add('byebye');
+            if (item.complete) {
+                console.log(item.src);
+            }
+            else {
+                item.addEventListener('load', function () {
+                    var altura = getVal(gallery, 'grid-auto-rows');
+                    var gap = getVal(gallery, 'grid-row-gap');
+                    var gitem = item.parentElement.parentElement;
+                    gitem.style.gridRowEnd = "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
+                    item.classList.remove('byebye');
+                });
+            }
+        });
+        window.addEventListener('resize', resizeAll);
+        gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+            item.addEventListener('click', function () {
+                item.classList.toggle('full');
+            });
+        });
+    </script>
 </body>
+<footer>
+    <!--footer text-->
+    <div class="footer-container">
+        <div class="footer-left">
+            <p>Copyright &copy; 2023 Your Company Name</p>
+        </div>
+        <div class="footer-right">
+            <ul class="footer-links">
+                <li><a href="#!aboutUs">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
 </html>
