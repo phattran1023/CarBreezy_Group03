@@ -279,7 +279,15 @@
   border-radius: 5px;
   right: 20px;
 }
-
+@media (max-width: 780px){
+  #shopping-cart{
+    display: block;
+    width: 100%;
+    z-index: 4;
+    padding-left: 40px;
+    border: none;
+  }
+}
 #shopping-cart table {
   width: 100%;
   border-collapse: collapse;
