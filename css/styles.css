@@ -256,12 +256,7 @@ transform: translateY(-0.5px);
   transform: scale(1.1);
   transition: transform 0.2s ease-in-out;
 }
-@media (max-width: 418px) {
-  #carousel-title {
-    min-height: 73.2px;
-    text-align: justify;
-  }
-}
+
 
 #viewmore-btn{
   margin: 10px 0;
