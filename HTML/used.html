@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hmm</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: #f8f8f8;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .intro-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin: 50px auto;
+            max-width: 800px;
+            padding: 50px;
+        }
+
+        #image-gallery .modal-footer {
+            display: block;
+        }
+
+        .thumb {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .image-animation image-hover {
+            animation: fade-in 1s;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .image-hover {
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .image-hover:hover {
+            transform: scale(1.1);
+        }
+    </style>
+    <div style="margin-top: 150px;" class="intro-container">
+        <h1>Welcome to our Used Car Dealership!</h1>
+        <p>TWe understand that buying a car is a significant investment, and we're here to help you make the best
+            decision possible. At our dealership, we offer a wide range of high-quality used cars to suit every need and
+            budget. From practical sedans to spacious SUVs and everything in between, we're confident that you'll find
+            the perfect car for you.</p>
+        <p>All of our used cars undergo a rigorous inspection process to ensure that they meet our high standards for
+            safety, reliability, and performance. Our team of experienced technicians carefully examine each vehicle to
+            identify any potential issues, and we only offer cars that have been thoroughly tested and maintained.</p>
+        <p>In addition to providing you with a great selection of <a href="#!shopCar">Used</a> cars, we also offer financing options to help you
+            get behind the wheel of your dream car. Our financing specialists will work with you to find a payment plan
+            that fits your budget and lifestyle, so you can enjoy your new ride with confidence.</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover" src="./imgcars/SUV/2/img1.jpg"
+                            alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover"
+                            src="./imgcars/Convertible/4/img1.jpg" alt="Another alt text">
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover"
+                            src="./imgcars/Convertible/5/img1.jpg" alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover" src="./imgcars/Convertible/6/img1.jpg"
+                            alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover"
+                            src="./imgcars/Hatchbacks/8/LeafSHBS1.jpg" alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover"
+                            src="./imgcars/Hatchbacks/9/LeafSHatchback1.jpg" alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover"
+                            src="./imgcars/Hatchbacks/10/IoniqHybridBlue1.jpg" alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover"
+                            src="./imgcars/Hatchbacks/11/VoltPremierHBPremier1.jpg" alt="Another alt text">
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover"
+                            src="./imgcars/Sedan/12/C-ClassAMGC43Sedan1.jpg" alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover"
+                            src="./imgcars/Sedan/13/MalibuLSSedan1.jpg" alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover"
+                            src="./imgcars/Sedan/14/Altima25SVSedan1.jpg" alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover"
+                            src="./imgcars/Sedan/15/IS250Sedan1.jpg" alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover"
+                            src="./imgcars/Sedan/16/3Series320iSedan1.jpg" alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover"
+                            src="./imgcars/Sedan/21/3Series340iSedan1.jpg" alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover"
+                            src="./imgcars/Other/22/4WDSportPlatinum1.jpg" alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover"
+                            src="./imgcars/Other/23/EscaladeSport4WDSport1.jpg" alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover"
+                            src="./imgcars/Other/24/4WDPremiumLuxury1.jpg" alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover"
+                            src="./imgcars/Other/27/TahoeHighCountry4WD1.jpg" alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover"
+                            src="./imgcars/Other/28/SuperDutyF-350SRWLARIAT1.jpg" alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover"
+                            src="./imgcars/Other/29/F-150LARIAT1.jpg" alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover"
+                            src="./imgcars/Other/30/Tacoma4WDTRDPro1.jpg" alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover"
+                            src="./imgcars/Other/31/TahoeLS4WDLS1.jpg" alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover"
+                            src="./imgcars/Other/32/MDXA-SpecPackage1.jpg" alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover"
+                            src="./imgcars/Other/33/LongRangeAWD1.jpg" alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover"
+                            src="./imgcars/Other/34/4RunnerTRDPro4WD1.jpg" alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover"
+                            src="./imgcars/Other/35/ExplorerPlatinum4WD1.jpg" alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover"
+                            src="./imgcars/Other/36/MustangMach-ESelect1.jpg" alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover"
+                            src="./imgcars/Truck/40/SuperDutyF-350SRW1.jpg" alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover"
+                            src="./imgcars/Truck/42/Denali4WDCrewCab1.jpg" alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail">
+                        <img class="img-thumbnail image-animation image-hover"
+                            src="./imgcars/Truck/43/Silverado3500HDHighCountry1.jpg" alt="Another alt text">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <!--footer text-->
+    <div class="footer-container">
+        <div class="footer-left">
+            <p>Copyright &copy; 2023 Your Company Name</p>
+        </div>
+        <div class="footer-right">
+            <ul class="footer-links">
+                <li><a href="#!aboutUs">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+</html>

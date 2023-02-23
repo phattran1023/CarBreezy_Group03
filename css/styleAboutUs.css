@@ -90,3 +90,13 @@ h2 {
 .our-team li .team-member-info {
     text-align: center;
 }
+.info {
+    width: 50%;
+    
+}
+.info li {
+    display: block;
+}
+.row {
+    padding: 50px 30px;
+}
