@@ -90,7 +90,7 @@
         <div class="filterBar">
           <input id="searchBar" ng-model="searchtxt" type="text" placeholder="Search your car ..." />
           <!--filter hiden-->
-          <select ng-model="filterRadio">
+          <select id="filter-respone" ng-model="filterRadio">
             <option value="">--Select--</option>
             <option value="SUV">SUV</option>
             <option value="Convertibles">Convertibles</option>
@@ -144,7 +144,7 @@
                 <option value="">--Select--</option>
                 <option value="-price">Decrease by price</option>
                 <option value="price">Increase by price</option>
-              </select>              
+              </select>          
             </li>
           </ul>
         </div>

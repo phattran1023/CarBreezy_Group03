@@ -264,9 +264,12 @@
   }
 }
 @media (min-width: 480px){
-  .filterBar select{
+  .filterBar #filter-respone{
     display: none;
   }
+}
+#filter-respone option {
+  padding: 0 15px;
 }
 #shopping-cart {
   display: none;
