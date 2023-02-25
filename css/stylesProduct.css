@@ -276,7 +276,7 @@
   position: fixed;;
   background-color: #ffffff;
   padding: 10px;
-  z-index: 2;
+  z-index: 3;
   width: 700px;
   border: 1px solid #333;
   border-radius: 5px;
