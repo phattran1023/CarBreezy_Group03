@@ -262,6 +262,9 @@
   .filterBar ul,h3{
     display: none;
   }
+  #shopping-cart {
+    width: 100% !important;
+  }
 }
 @media (min-width: 480px){
   .filterBar #filter-respone{
@@ -277,7 +280,7 @@
   background-color: #ffffff;
   padding: 10px;
   z-index: 3;
-  width: 700px;
+  width: 70%;
   border: 1px solid #333;
   border-radius: 5px;
   right: 20px;
